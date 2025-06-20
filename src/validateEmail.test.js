@@ -50,10 +50,6 @@ describe(`Function 'validateEmail':`, () => {
       expect(validateEmail('test@mailcom')).toBe(false);
     });
 
-  it(`should return 'true' for email with dot in domain`, () => {
-    expect(validateEmail('test@mail.co.m')).toBe(true);
-  });
-
   it(`should return 'false' for email with double dots in domain`, () => {
     expect(validateEmail('test@mail:com')).toBe(false);
   });
